@@ -1,0 +1,11 @@
+
+  <div class="warning">warning-alert works!</div><br>
+  <p> {{serverCreationStatus}} </p>
+  <label>Server Name</label>
+  {{servers[0].name}}
+  <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+  <button [disabled]='!allowNewServer' (click)='onCreateServer()' class='btn btn-primary'>Add server</button><br>
+<p>Server with id of {{servers[0].id}} is currently {{servers[0].status}}  </p>
+<p [innerHtml]='"<h1>" + servers[0].id + "</h1>"' ></p>
+
+
