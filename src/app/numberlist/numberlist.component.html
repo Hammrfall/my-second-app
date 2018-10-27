@@ -1,0 +1,18 @@
+<div class="jumbotron container">
+<h1 class="display-4">Using Basic directives</h1>
+
+<button type="button" class="btn btn-secondary-outline" (click)="toggleText()">Display of password</button>
+
+<p *ngIf="displayText" class="display-5">Password=bbqSquirrel2018</p>
+
+<ul class="nav nav-tabs|pills nav-stacked">
+  <li *ngFor="let click of clicks; let i = index" [ngClass]="{whiteText: i+1 >= 5}" [ngStyle] = "{backgroundColor:getColor(click)}" class="nav-item">
+    {{click}}</li>
+</ul>
+
+
+
+
+
+
+</div>
