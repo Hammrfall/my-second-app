@@ -1,3 +1,18 @@
 
-  <div class='success'>success-alert works!</div>
+  <div class='success container'>success-alert works!
+    <h4 class="display-4">Displays basic data binding, event binding, and two-way binding with calling functions on events</h4>
+  <input type="text" class="form-control" [(ngModel)]='userName' (input)='checkChange()' />
+  <p class='lead container' >You may change your username here.  Your userName is currently {{userName}} </p>
+  <br>
+  <button class= "btn btn-primary" [disabled]='!userNameState' (click)='resetUserName()'>Reset name</button>
 
+</div>
+
+<div class='success container'>
+    <h4 class="display-4">Displays basic data binding, event binding, and two-way binding with functions directly in code</h4>
+<input type="text" class="form-control" [(ngModel)]='userName' />
+<p class='lead container' >You may change your username here.  Your userName is currently {{userName}} </p>
+<br>
+<button class= "btn btn-primary" [disabled]='userName =="" ' (click)='userName = ""'>Reset name</button>
+
+</div>

@@ -14,7 +14,7 @@ export class WarningAlertComponent implements OnInit {
    }
     
   ngOnInit() {
-    this.servers.push({id: 1, name : 'bob', status: 'online'})
+    this.servers.push({id: 1, name : 'bob', status: 'online', function: 'mail'})
   }
   onCreateServer(){
     this.serverCreationStatus = "A new server was created"

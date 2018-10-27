@@ -4,6 +4,8 @@
   <label>Server Name</label>
   {{servers[0].name}}
   <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+  <label>ServerFunction</label>
+  <input type="text" class="form-control" [(ngModel)]='servers[0].function' >
   <button [disabled]='!allowNewServer' (click)='onCreateServer()' class='btn btn-primary'>Add server</button><br>
 <p>Server with id of {{servers[0].id}} is currently {{servers[0].status}}  </p>
 <p [innerHtml]='"<h1>" + servers[0].id + "</h1>"' ></p>

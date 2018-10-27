@@ -1,5 +1,13 @@
+<div class="container">
+<h4 class="display-4">Displays simple ngif statement with ng-template alt text</h4>
+
 <p>
   servers works!
 </p>
+<p *ngIf ="newServer; else newServertemp">new server created</p>
+<ng-template #newServertemp>
+  <p>No new server was created</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
+</div>
